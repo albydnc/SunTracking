@@ -1,0 +1,6 @@
+SunTracker         KEYWORD1
+getElevation       KEYWORD2
+getAzimuth         KEYWORD2
+getRightAscension  KEYWORD2
+getDeclination     KEYWORD2
+setLatLon          KEYWORD2
