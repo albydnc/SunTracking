@@ -22,6 +22,6 @@ void loop(){
   float Az  = Sun.getAzimuth(12,0,0,1,1,2018);
   float El  = Sun.getElevation(12,0,0,1,1,2018);
   Serial.println("Declination: "+String(dec)+" Right Ascension: "+String(RA));
-  Serial.println("Azimuth: "String(Az)+" Elevation: "+String(El));
+  Serial.println("Azimuth: "+String(Az)+" Elevation: "+String(El));
   delay(2000);
 }
