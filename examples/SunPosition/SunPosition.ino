@@ -6,8 +6,8 @@ Created by Alberto Perro, 2015.
 Released into public domain.
 */
 #include <SunTracking.h>
-#define LATITUDE = 8.0;
-#define LONGITUDE = 40.0;
+#define LATITUDE  8.0
+#define LONGITUDE 40.0
 SunTracker Sun;
 
 void setup()
