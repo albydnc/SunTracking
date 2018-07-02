@@ -1,10 +1,9 @@
 /*
-SunTracking - Library for tracking Sun position
-It uses the sun trajectory equations to precisely
-calculate the coordinates.
-
-Created by Alberto Perro, September 2014.
-Released into the public domain in July 2018.
+Sun Tracking Library for Arduino
+Based on Sun Equations from the book
+Jean Meeus - "Astronomical Algorithms"
+Created by Alberto Perro, 2015.
+Released into public domain.
 */
 #ifndef SunTracking_h
 #define SunTracking_h
