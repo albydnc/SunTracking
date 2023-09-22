@@ -9,20 +9,25 @@ Released into public domain.
 #define SunTracking_h
 
 #include <Arduino.h>
+#include <math.h>
 
 class SunTracker
 {
 public:
-  float getRightAscension(int hh,int mm,int ss,int DD, int MM, int YY);
-  float getDeclination(int hh,int mm,int ss,int DD, int MM, int YY);
-  void setLatLon(float lat, float lon);
-  float getAzimuth(int hh,int mm,int ss,int DD, int MM, int YY);
-  float getElevation(int hh,int mm,int ss,int DD, int MM, int YY);
+  double getRightAscension(int hh,int mm,int ss,int DD, int MM, int YY);
+  double getDeclination(int hh,int mm,int ss,int DD, int MM, int YY);
+  void setLatLon(double lat, double lon);
+  double getAzimuth(int hh,int mm,int ss,int DD, int MM, int YY);
+  double getElevation(int hh,int mm,int ss,int DD, int MM, int YY);
 private:
-  void Julian(int hh,int mm,int ss,int DD, int MM, int YY);
-  void SunCoordinates(int hh,int mm,int ss,int DD, int MM, int YY);
-  float _JCE, _L0, _M, _e, _Center, _TLon,_TM,_eps,_R,_Omega,_ALon, _RA,_Dec,_HA,_Lat,_Lon;
-  float _PI = 3.1415926;
+  double getAzimuth();
+  double getElevation();
+  void setJulian(int hh,int mm,int ss,int DD, int MM, int YY);
+  void calcSunCoordinates(int hh,int mm,int ss,int DD, int MM, int YY);
+  void calcSunCoordinates();
+  double _gst, _JD, _JCE, _L0, _M, _e, _Center, _TLon,_TM,_eps,_R,_Omega,_ALon, _RA,_Dec,_HA,_Lat,_Lon;
+  constexpr static double DEG2RAD = M_PI/180;
+  constexpr static double RAD2DEG = 180/M_PI;
 };
 
 #endif
